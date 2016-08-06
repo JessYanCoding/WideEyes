@@ -50,7 +50,6 @@ dependencies {
     compile rootProject.ext.dependencies["cardview-v7"]
     compile rootProject.ext.dependencies["glide"]
     provided rootProject.ext.dependencies["javax.annotation"]
-    compile rootProject.ext.dependencies["timber"]
     compile project(':arms')
 
 }

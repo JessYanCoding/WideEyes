@@ -4,12 +4,15 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
+import com.jess.arms.BuildConfig;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.di.component.DaggerAppComponent;
 import com.jess.arms.di.module.AppModule;
 import com.jess.arms.di.module.ClientModule;
 
 import java.util.LinkedList;
+
+import timber.log.Timber;
 
 /**
  * 本项目由
@@ -37,6 +40,9 @@ public abstract class BaseApplication extends Application {
                 .appModule(new AppModule(this))
                 .clientModule(mClientModule)
                 .build();
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
     }
 
     public abstract String getBaseUrl();

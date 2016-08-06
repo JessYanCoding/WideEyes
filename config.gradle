@@ -36,6 +36,7 @@ ext {
             "rxlifecycle"            : "com.trello:rxlifecycle:0.6.1",
             "rxlifecycle-components" : "com.trello:rxlifecycle-components:0.6.1",
             "dagger2"                : "com.google.dagger:dagger:2.0.2",
+            "rxbinding-recyclerview-v7":"com.jakewharton.rxbinding:rxbinding-recyclerview-v7:0.4.0",
             "pickerview"             : "com.bigkoo:pickerview:2.0.8",
             "nineoldandroids"        : "com.nineoldandroids:library:2.4.0",
             "picasso"                : "com.squareup.picasso:picasso:2.5.2",

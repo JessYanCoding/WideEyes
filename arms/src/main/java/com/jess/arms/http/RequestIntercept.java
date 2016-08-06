@@ -12,6 +12,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import okio.Buffer;
 import okio.BufferedSource;
+import timber.log.Timber;
 
 
 /**
@@ -31,19 +32,17 @@ public class RequestIntercept implements Interceptor {
             LogUtils.warnInfo("request.body() == null");
         }
 
-
         //打印url信息
-        LogUtils.warnInfo("Request",
-                String.format("Sending Request %s on %n Params --->  %s%n Connection ---> %s%n Headers ---> %s", request.url()
-                        , request.body() != null ? requestbuffer.readUtf8() : "null"
-                        , chain.connection()
-                        , request.headers()));
+        Timber.tag("Request").w("Sending Request %s on %n Params --->  %s%n Connection ---> %s%n Headers ---> %s", request.url()
+                , request.body() != null ? requestbuffer.readUtf8() : "null"
+                , chain.connection()
+                , request.headers());
 
         long t1 = System.nanoTime();
         Response originalResponse = chain.proceed(request);
         long t2 = System.nanoTime();
         //打赢响应时间
-        LogUtils.warnInfo("Response", String.format("Received response  in %.1fms%n%s", (t2 - t1) / 1e6d, originalResponse.headers()));
+        Timber.tag("Response").w("Received response  in %.1fms%n%s", (t2 - t1) / 1e6d, originalResponse.headers());
 
         //读取服务器返回的结果
         ResponseBody responseBody = originalResponse.body();
@@ -57,8 +56,7 @@ public class RequestIntercept implements Interceptor {
         }
 
         String bodyString = buffer.clone().readString(charset);
-        LogUtils.warnInfo("Response", "Body------>" + bodyString);
-
+        Timber.tag("Response").w("Body------>" + bodyString);
 
 
         return originalResponse;
