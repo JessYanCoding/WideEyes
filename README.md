@@ -1,5 +1,8 @@
 # WideEyes
-##源于{开眼视频},架构使用Mvp+Dagger2+Retrofit+Rxjava的一款内外兼得的学习项目. Power by [一个快速集成mvp + dagger + rxjava系列 等主流开源项目的集成框架](https://github.com/JessYanCoding/MVPArms)
+##源于{开眼视频},架构使用Mvp+Dagger2+Retrofit+Rxjava的一款内外兼得的学习项目. 
+
+##Power By
+[一个快速集成mvp + dagger + rxjava系列 等主流开源项目的集成框架](https://github.com/JessYanCoding/MVPArms)
 
 
 ##About Me
