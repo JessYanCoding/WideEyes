@@ -13,6 +13,7 @@ ext {
 
 
     dependencies = [
+            "multidex"               : "compile 'com.android.support:multidex:1.0.1'",
             "androidJUnitRunner"     : "android.support.test.runner.AndroidJUnitRunner",
             "appcompat-v7"           : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
             "design"                 : "com.android.support:design:${android["androidSupportSdkVersion"]}",
@@ -32,7 +33,10 @@ ext {
             "androideventbus"        : "org.simple:androideventbus:1.0.5.1",
             "rxandroid"              : "io.reactivex:rxandroid:1.1.0",
             "rxjava"                 : "io.reactivex:rxjava:1.1.0",
+            "rxlifecycle"            : "com.trello:rxlifecycle:0.6.1",
+            "rxlifecycle-components" : "com.trello:rxlifecycle-components:0.6.1",
             "dagger2"                : "com.google.dagger:dagger:2.0.2",
+            "rxbinding-recyclerview-v7":"com.jakewharton.rxbinding:rxbinding-recyclerview-v7:0.4.0",
             "pickerview"             : "com.bigkoo:pickerview:2.0.8",
             "nineoldandroids"        : "com.nineoldandroids:library:2.4.0",
             "picasso"                : "com.squareup.picasso:picasso:2.5.2",
@@ -47,5 +51,7 @@ ext {
             "espresso-contrib"       : ("com.android.support.test.espresso:espresso-contrib:2.2.2"),
             "espresso-intents"       : "com.android.support.test.espresso:espresso-intents:2.2.2",
             "mockito-core"           : "org.mockito:mockito-core:1.+",
+            "timber"                 : "com.jakewharton.timber:timber:4.1.2",
+            "javax.annotation"       : 'javax.annotation:jsr250-api:1.0'
     ]
 }
