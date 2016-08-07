@@ -1,4 +1,4 @@
-package com.jess.wideeyes.mvp.ui.widget.glide;
+package com.jess.arms.widget.imageloader.glide;
 
 import android.app.Activity;
 import android.content.Context;

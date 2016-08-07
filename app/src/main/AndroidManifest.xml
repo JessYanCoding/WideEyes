@@ -35,7 +35,7 @@
             android:value="1920"/>
         <!--glide配置-->
         <meta-data
-            android:name="com.jess.wideeyes.mvp.ui.widget.glide.GlideConfiguration"
+            android:name="com.jess.arms.widget.imageloader.glide.GlideConfiguration"
             android:value="GlideModule"/>
 
 

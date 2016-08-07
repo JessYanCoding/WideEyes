@@ -1,8 +1,9 @@
 package com.jess.arms.di.module;
 
+import android.app.Application;
+
 import com.jess.arms.http.RequestIntercept;
 import com.jess.arms.utils.DataHelper;
-import com.jess.arms.utils.UiUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,7 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.HttpUrl;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import retrofit2.BaseUrl;
 import retrofit2.Retrofit;
@@ -39,9 +41,9 @@ public class ClientModule {
 
     @Singleton
     @Provides
-    OkHttpClient provideClient() {
+    OkHttpClient provideClient(Cache cache, Interceptor intercept) {
         final OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder();
-        return configureClient(okHttpClient);
+        return configureClient(okHttpClient, cache, intercept);
     }
 
     @Singleton
@@ -55,6 +57,19 @@ public class ClientModule {
     @Provides
     HttpUrl provideBaseUrl() {
         return mApiUrl;
+    }
+
+    @Singleton
+    @Provides
+    Cache provideCache(Application application) {
+        return new Cache(DataHelper.getCacheFile(application), HTTP_RESPONSE_DISK_CACHE_MAX_SIZE);//设置缓存路径和大小
+    }
+
+
+    @Singleton
+    @Provides
+    Interceptor provideIntercept() {
+        return new RequestIntercept();//打印请求信息的拦截器
     }
 
     private Retrofit configureRetrofit(Retrofit.Builder builder, OkHttpClient client, final HttpUrl httpUrl) {
@@ -75,14 +90,16 @@ public class ClientModule {
      * 配置okhttpclient
      *
      * @param okHttpClient
+     * @param Cache
+     * @param Interceptor
      * @return
      */
-    private OkHttpClient configureClient(OkHttpClient.Builder okHttpClient) {
+    private OkHttpClient configureClient(OkHttpClient.Builder okHttpClient, Cache cache, Interceptor intercept) {
         return okHttpClient
                 .connectTimeout(TOME_OUT, TimeUnit.SECONDS)
                 .readTimeout(TOME_OUT, TimeUnit.SECONDS)
-                .cache(new Cache(DataHelper.getCacheFile(UiUtils.getContext()), HTTP_RESPONSE_DISK_CACHE_MAX_SIZE))//设置缓存路径和大小
-                .addNetworkInterceptor(new RequestIntercept())
+                .cache(cache)//设置缓存
+                .addNetworkInterceptor(intercept)
                 .build();
     }
 //    .addNetworkInterceptor(new Interceptor() {

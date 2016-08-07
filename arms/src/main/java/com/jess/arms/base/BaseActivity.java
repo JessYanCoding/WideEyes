@@ -11,8 +11,6 @@ import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.jess.arms.di.component.AppComponent;
-import com.jess.arms.di.module.ClientModule;
 import com.jess.arms.mvp.BasePresenter;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.zhy.autolayout.AutoFrameLayout;
@@ -92,16 +90,15 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
         EventBus.getDefault().register(this);//注册到事件主线
         setContentView(initView());
         ButterKnife.bind(this);//绑定到butterknife
-        ComponentInject(mApplication.getAppComponent(),mApplication.getClientModule());//依赖注入
+        ComponentInject();//依赖注入
         initData();
     }
 
     /**
      * 依赖注入的入口
      *
-     * @param appComponent appComponent
      */
-    protected abstract void ComponentInject(AppComponent appComponent, ClientModule clientModule);
+    protected abstract void ComponentInject();
 
 
     public void FullScreencall() {

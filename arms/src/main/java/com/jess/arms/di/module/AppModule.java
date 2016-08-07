@@ -1,6 +1,6 @@
 package com.jess.arms.di.module;
 
-import com.jess.arms.base.BaseApplication;
+import android.app.Application;
 
 import javax.inject.Singleton;
 
@@ -12,15 +12,15 @@ import dagger.Provides;
  */
 @Module
 public class AppModule {
-    private BaseApplication mApplication;
+    private Application mApplication;
 
-    public AppModule(BaseApplication application) {
+    public AppModule(Application application) {
         this.mApplication = application;
     }
 
     @Singleton
     @Provides
-    public BaseApplication provideApplication() {
+    public Application provideApplication() {
         return mApplication;
     }
 }

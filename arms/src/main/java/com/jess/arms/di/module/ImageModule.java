@@ -1,8 +1,8 @@
-package com.jess.wideeyes.di.module;
+package com.jess.arms.di.module;
 
 import com.jess.arms.widget.imageloader.BaseImageLoaderStrategy;
 import com.jess.arms.widget.imageloader.ImageLoader;
-import com.jess.wideeyes.mvp.ui.widget.glide.GlideImageLoaderStrategy;
+import com.jess.arms.widget.imageloader.glide.GlideImageLoaderStrategy;
 
 import javax.inject.Singleton;
 

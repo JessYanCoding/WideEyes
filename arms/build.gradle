@@ -53,5 +53,6 @@ dependencies {
     compile rootProject.ext.dependencies["dagger2"]
     compile rootProject.ext.dependencies["okhttp3"]
     compile rootProject.ext.dependencies["timber"]
+    compile rootProject.ext.dependencies["glide"]
     apt 'com.google.dagger:dagger-compiler:2.0.2'
 }

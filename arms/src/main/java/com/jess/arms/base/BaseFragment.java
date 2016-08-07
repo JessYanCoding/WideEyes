@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jess.arms.di.component.AppComponent;
-import com.jess.arms.di.module.ClientModule;
 import com.jess.arms.mvp.BasePresenter;
 import com.trello.rxlifecycle.components.support.RxFragment;
 
@@ -40,16 +38,15 @@ public abstract class BaseFragment<P extends BasePresenter> extends RxFragment {
         super.onActivityCreated(savedInstanceState);
         mActivity = (BaseActivity) getActivity();
         EventBus.getDefault().register(this);//注册到事件主线
-        ComponentInject(mActivity.mApplication.getAppComponent(),mActivity.mApplication.getClientModule());
+        ComponentInject();
         initData();
     }
 
     /**
      * 依赖注入的入口
      *
-     * @param appComponent appComponent
      */
-    protected abstract void ComponentInject(AppComponent appComponent,ClientModule clientModule);
+    protected abstract void ComponentInject();
 
 
     @Override
