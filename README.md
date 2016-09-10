@@ -5,6 +5,9 @@
 [一个快速集成mvp + dagger + rxjava系列 等主流开源项目的集成框架](https://github.com/JessYanCoding/MVPArms)
 
 
+##Statement
+[WideEyes]仅作学习交流所用,数据来源于[开眼视频](http://www.wandoujia.com/eyepetizer,数据接口均属于非正常渠道获取,请勿用于商业用途,所有权利供原作公司拥有。
+
 ##About Me 
 * **Email**: jess.yan.effort@gmail.com
 
