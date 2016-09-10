@@ -24,7 +24,6 @@ import java.util.LinkedList;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-
 public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatActivity {
     protected final String TAG = this.getClass().getSimpleName();
     private BroadcastReceiver mBroadcastReceiver;
@@ -39,21 +38,17 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
 
 
     @Override
-    public View onCreateView(String name, Context context, AttributeSet attrs)
-    {
+    public View onCreateView(String name, Context context, AttributeSet attrs) {
         View view = null;
-        if (name.equals(LAYOUT_FRAMELAYOUT))
-        {
+        if (name.equals(LAYOUT_FRAMELAYOUT)) {
             view = new AutoFrameLayout(context, attrs);
         }
 
-        if (name.equals(LAYOUT_LINEARLAYOUT))
-        {
+        if (name.equals(LAYOUT_LINEARLAYOUT)) {
             view = new AutoLinearLayout(context, attrs);
         }
 
-        if (name.equals(LAYOUT_RELATIVELAYOUT))
-        {
+        if (name.equals(LAYOUT_RELATIVELAYOUT)) {
             view = new AutoRelativeLayout(context, attrs);
         }
 
@@ -61,9 +56,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
 
         return super.onCreateView(name, context, attrs);
     }
-
-
-
 
 
     @Override
@@ -96,7 +88,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
 
     /**
      * 依赖注入的入口
-     *
      */
     protected abstract void ComponentInject();
 
@@ -120,7 +111,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
         synchronized (BaseActivity.class) {
             mApplication.getActivityList().remove(this);
         }
-        mPresenter.onDestroy();//释放资源
+        if (mPresenter != null) mPresenter.onDestroy();//释放资源
         ButterKnife.unbind(this);
         EventBus.getDefault().unregister(this);
     }

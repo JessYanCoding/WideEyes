@@ -1,7 +1,7 @@
 package com.jess.wideeyes.di.module;
 
+
 import com.jess.wideeyes.mvp.model.api.service.CommonService;
-import com.jess.wideeyes.mvp.model.api.service.ServiceManager;
 
 import javax.inject.Singleton;
 
@@ -20,13 +20,5 @@ public class ServiceModule {
     CommonService provideCommonService(Retrofit retrofit) {
         return retrofit.create(CommonService.class);
     }
-
-
-    @Singleton
-    @Provides
-    ServiceManager provideServiceManager(CommonService commonService) {
-        return new ServiceManager(commonService);
-    }
-
 
 }

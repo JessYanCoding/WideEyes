@@ -35,7 +35,7 @@ public abstract class DefaultAdapter<T> extends RecyclerView.Adapter<BaseHolder<
             @Override
             public void onViewClick(View view, int position) {
                 if (mOnItemClickListener != null) {
-                    mOnItemClickListener.onItemClick(view, mInfos.get(position));
+                    mOnItemClickListener.onItemClick(view, mInfos.get(position), position);
                 }
             }
         });
@@ -95,7 +95,7 @@ public abstract class DefaultAdapter<T> extends RecyclerView.Adapter<BaseHolder<
 
 
     public interface OnRecyclerViewItemClickListener<T> {
-        void onItemClick(View view, T data);
+        void onItemClick(View view, T data, int position);
     }
 
     public void setOnItemClickListener(OnRecyclerViewItemClickListener listener) {
