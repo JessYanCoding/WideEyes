@@ -6,7 +6,7 @@
 
 
 ##Statement
-[WideEyes]仅作学习交流所用,数据来源于[开眼视频](http://www.wandoujia.com/eyepetizer,数据接口均属于非正常渠道获取,请勿用于商业用途,所有权利供原作公司拥有。
+[WideEyes]仅作学习交流所用,数据来源于[开眼视频](http://www.wandoujia.com/eyepetizer),数据接口均属于非正常渠道获取,请勿用于商业用途,所有权利供原作公司拥有,如有侵权,请告知我,我会删除.
 
 ##About Me 
 * **Email**: jess.yan.effort@gmail.com
