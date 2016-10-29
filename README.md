@@ -1,4 +1,6 @@
 # WideEyes(开发中,敬请期待)
+[![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
+
 ##源于{开眼视频},架构使用Mvp+Dagger2+Retrofit+Rxjava的一款内外兼得的学习项目. 
 
 ##Power By 
