@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="me.jessyan.mvparms.demo.mvp.ui.activity.UserActivity"
+            android:name=".mvp.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>

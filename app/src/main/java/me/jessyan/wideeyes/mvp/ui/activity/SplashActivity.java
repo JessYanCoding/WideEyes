@@ -7,7 +7,7 @@ import me.jessyan.wideeyes.R;
 import me.jessyan.wideeyes.di.component.AppComponent;
 import me.jessyan.wideeyes.mvp.ui.common.WEActivity;
 
-public class BActivity extends WEActivity {
+public class SplashActivity extends WEActivity {
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
