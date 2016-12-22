@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jess.wideeyes">
+    package="me.jessyan.wideeyes">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -10,19 +10,22 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-
     <application
+        android:name=".app.WEApplication"
         android:allowBackup="true"
-        android:name="com.jess.wideeyes.app.WEApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvp.ui.activity.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity
+            android:name="me.jessyan.mvparms.demo.mvp.ui.activity.UserActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -37,10 +40,8 @@
             android:value="1920"/>
         <!--glide配置-->
         <meta-data
-            android:name="com.jess.arms.widget.imageloader.glide.GlideConfiguration"
+            android:name="me.jess.arms.widget.imageloader.glide.GlideConfiguration"
             android:value="GlideModule"/>
-
-
 
     </application>
 

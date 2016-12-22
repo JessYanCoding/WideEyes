@@ -1,1 +1,1 @@
-include ':app', ':rxerrorhandler', ':arms'
+include ':app', ':arms', ':rxerrorhandler'
