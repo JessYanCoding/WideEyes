@@ -1,8 +1,8 @@
 package me.jessyan.mvparms.demo.mvp.contract;
 
-import me.jess.arms.base.DefaultAdapter;
-import me.jess.arms.mvp.BaseView;
-import me.jess.arms.mvp.IModel;
+import com.jess.arms.base.DefaultAdapter;
+import com.jess.arms.mvp.BaseView;
+import com.jess.arms.mvp.IModel;
 
 import java.util.List;
 

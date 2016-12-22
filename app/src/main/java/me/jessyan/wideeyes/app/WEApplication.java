@@ -2,6 +2,9 @@ package me.jessyan.wideeyes.app;
 
 import android.content.Context;
 
+import com.jess.arms.base.BaseApplication;
+import com.jess.arms.http.GlobeHttpHandler;
+import com.jess.arms.utils.UiUtils;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
@@ -9,9 +12,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import me.jess.arms.base.BaseApplication;
-import me.jess.arms.http.GlobeHttpHandler;
-import me.jess.arms.utils.UiUtils;
 import me.jessyan.rxerrorhandler.handler.listener.ResponseErroListener;
 import me.jessyan.wideeyes.BuildConfig;
 import me.jessyan.wideeyes.di.component.AppComponent;

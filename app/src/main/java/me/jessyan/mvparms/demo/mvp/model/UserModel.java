@@ -1,6 +1,6 @@
 package me.jessyan.mvparms.demo.mvp.model;
 
-import me.jess.arms.mvp.BaseModel;
+import com.jess.arms.mvp.BaseModel;
 
 import java.util.List;
 

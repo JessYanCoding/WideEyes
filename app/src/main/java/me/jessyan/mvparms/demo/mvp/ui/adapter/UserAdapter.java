@@ -4,8 +4,8 @@ import android.view.View;
 
 import java.util.List;
 
-import me.jess.arms.base.BaseHolder;
-import me.jess.arms.base.DefaultAdapter;
+import com.jess.arms.base.BaseHolder;
+import com.jess.arms.base.DefaultAdapter;
 import me.jessyan.mvparms.demo.mvp.model.entity.User;
 import me.jessyan.mvparms.demo.mvp.ui.holder.UserItemHolder;
 import me.jessyan.wideeyes.R;

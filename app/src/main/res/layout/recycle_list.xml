@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<me.jess.arms.widget.autolayout.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="550px"
-                                             android:layout_marginRight="15px"
-                                             android:layout_marginBottom="15px"
+<com.jess.arms.widget.autolayout.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="550px"
+                                              android:layout_marginRight="15px"
+                                              android:layout_marginBottom="15px"
     >
 
     <ImageView
@@ -25,4 +25,4 @@
         android:textSize="40px"
         tools:text="ss" />
 
-</me.jess.arms.widget.autolayout.AutoCardView>
+</com.jess.arms.widget.autolayout.AutoCardView>

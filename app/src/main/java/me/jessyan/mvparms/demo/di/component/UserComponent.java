@@ -1,6 +1,6 @@
 package me.jessyan.mvparms.demo.di.component;
 
-import me.jess.arms.di.scope.ActivityScope;
+import com.jess.arms.di.scope.ActivityScope;
 
 import dagger.Component;
 import me.jessyan.mvparms.demo.di.module.UserModule;

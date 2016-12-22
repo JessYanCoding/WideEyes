@@ -6,9 +6,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jakewharton.rxbinding.widget.RxTextView;
-import me.jess.arms.base.BaseHolder;
-import me.jess.arms.widget.imageloader.ImageLoader;
-import me.jess.arms.widget.imageloader.glide.GlideImageConfig;
+import com.jess.arms.base.BaseHolder;
+import com.jess.arms.widget.imageloader.ImageLoader;
+import com.jess.arms.widget.imageloader.glide.GlideImageConfig;
 import me.jessyan.wideeyes.R;
 
 import butterknife.BindView;

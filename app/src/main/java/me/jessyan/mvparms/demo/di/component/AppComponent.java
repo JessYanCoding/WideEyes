@@ -8,11 +8,11 @@ import com.tbruyelle.rxpermissions.RxPermissions;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import me.jess.arms.base.AppManager;
-import me.jess.arms.di.module.AppModule;
-import me.jess.arms.di.module.ClientModule;
-import me.jess.arms.di.module.ImageModule;
-import me.jess.arms.widget.imageloader.ImageLoader;
+import com.jess.arms.base.AppManager;
+import com.jess.arms.di.module.AppModule;
+import com.jess.arms.di.module.ClientModule;
+import com.jess.arms.di.module.ImageModule;
+import com.jess.arms.widget.imageloader.ImageLoader;
 import me.jessyan.mvparms.demo.di.module.CacheModule;
 import me.jessyan.mvparms.demo.di.module.ServiceModule;
 import me.jessyan.mvparms.demo.mvp.model.api.cache.CacheManager;

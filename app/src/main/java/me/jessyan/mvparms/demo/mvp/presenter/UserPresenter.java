@@ -2,12 +2,12 @@ package me.jessyan.mvparms.demo.mvp.presenter;
 
 import android.app.Application;
 
-import me.jess.arms.base.AppManager;
-import me.jess.arms.base.DefaultAdapter;
-import me.jess.arms.di.scope.ActivityScope;
-import me.jess.arms.mvp.BasePresenter;
-import me.jess.arms.utils.PermissionUtil;
-import me.jess.arms.utils.RxUtils;
+import com.jess.arms.base.AppManager;
+import com.jess.arms.base.DefaultAdapter;
+import com.jess.arms.di.scope.ActivityScope;
+import com.jess.arms.mvp.BasePresenter;
+import com.jess.arms.utils.PermissionUtil;
+import com.jess.arms.utils.RxUtils;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
 import java.util.ArrayList;

@@ -3,7 +3,7 @@ package me.jessyan.mvparms.demo.mvp.model.api.cache;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import me.jess.arms.http.BaseCacheManager;
+import com.jess.arms.http.BaseCacheManager;
 
 /**
  * Created by jess on 8/30/16 13:54

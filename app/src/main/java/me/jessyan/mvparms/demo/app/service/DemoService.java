@@ -1,6 +1,6 @@
 package me.jessyan.mvparms.demo.app.service;
 
-import me.jess.arms.base.BaseService;
+import com.jess.arms.base.BaseService;
 
 /**
  * Created by jess on 9/7/16 16:59

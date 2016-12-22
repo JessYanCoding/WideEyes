@@ -2,8 +2,8 @@ package me.jessyan.wideeyes.mvp.ui.common;
 
 import com.squareup.leakcanary.RefWatcher;
 
-import me.jess.arms.base.BaseFragment;
-import me.jess.arms.mvp.BasePresenter;
+import com.jess.arms.base.BaseFragment;
+import com.jess.arms.mvp.BasePresenter;
 import me.jessyan.wideeyes.app.WEApplication;
 import me.jessyan.wideeyes.di.component.AppComponent;
 

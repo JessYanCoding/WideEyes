@@ -3,7 +3,7 @@ package me.jessyan.mvparms.demo.mvp.model.api.service;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import me.jess.arms.http.BaseServiceManager;
+import com.jess.arms.http.BaseServiceManager;
 
 /**
  * Created by jess on 8/5/16 13:01

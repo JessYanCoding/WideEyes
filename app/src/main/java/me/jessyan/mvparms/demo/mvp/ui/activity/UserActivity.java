@@ -9,8 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import me.jess.arms.base.DefaultAdapter;
-import me.jess.arms.utils.UiUtils;
+import com.jess.arms.base.DefaultAdapter;
+import com.jess.arms.utils.UiUtils;
 import me.jessyan.wideeyes.R;
 import com.paginate.Paginate;
 

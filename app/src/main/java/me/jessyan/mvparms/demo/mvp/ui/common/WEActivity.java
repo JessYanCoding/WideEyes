@@ -1,7 +1,7 @@
 package me.jessyan.mvparms.demo.mvp.ui.common;
 
-import me.jess.arms.base.BaseActivity;
-import me.jess.arms.mvp.BasePresenter;
+import com.jess.arms.base.BaseActivity;
+import com.jess.arms.mvp.BasePresenter;
 
 import me.jessyan.mvparms.demo.app.WEApplication;
 import me.jessyan.mvparms.demo.di.component.AppComponent;
