@@ -1,18 +1,19 @@
-package me.jessyan.wideeyes.di.component;
+package common;
 
 import android.app.Application;
 
 import com.google.gson.Gson;
+import com.jess.arms.base.AppManager;
+import com.jess.arms.di.module.AppModule;
+import com.jess.arms.di.module.ClientModule;
+import com.jess.arms.di.module.GlobeConfigModule;
+import com.jess.arms.di.module.ImageModule;
+import com.jess.arms.widget.imageloader.ImageLoader;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import com.jess.arms.base.AppManager;
-import com.jess.arms.di.module.AppModule;
-import com.jess.arms.di.module.ClientModule;
-import com.jess.arms.di.module.ImageModule;
-import com.jess.arms.widget.imageloader.ImageLoader;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import me.jessyan.wideeyes.di.module.CacheModule;
 import me.jessyan.wideeyes.di.module.ServiceModule;
@@ -24,7 +25,8 @@ import okhttp3.OkHttpClient;
  * Created by jess on 8/4/16.
  */
 @Singleton
-@Component(modules = {AppModule.class, ClientModule.class, ServiceModule.class, ImageModule.class, CacheModule.class})
+@Component(modules = {AppModule.class, ClientModule.class, ServiceModule.class, ImageModule.class,
+        CacheModule.class, GlobeConfigModule.class})
 public interface AppComponent {
     Application Application();
 

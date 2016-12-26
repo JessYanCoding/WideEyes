@@ -3,11 +3,11 @@ package me.jessyan.wideeyes.mvp.ui.activity;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import common.AppComponent;
+import common.WEActivity;
 import me.jessyan.wideeyes.R;
-import me.jessyan.wideeyes.di.component.AppComponent;
-import me.jessyan.wideeyes.mvp.ui.common.WEActivity;
 
-public class SplashActivity extends WEActivity {
+public class SplashActivity extends WEActivity{
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
