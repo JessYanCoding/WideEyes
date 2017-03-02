@@ -12,7 +12,10 @@
 [WideEyes]仅作学习交流所用,数据来源于[开眼视频](http://www.wandoujia.com/eyepetizer),数据接口均属于非正常渠道获取,请勿用于商业用途,所有权利供原作公司拥有,如有侵权,请告知我,我会删除.
 
 ##About Me
-* **Email**: jess.yan.effort@gmail.com
+* **Email**: <jess.yan.effort@gmail.com>  
+* **Home**: <http://jessyan.me>
+* **掘金**: <https://gold.xitu.io/user/57a9dbd9165abd0061714613>
+* **简书**: <http://www.jianshu.com/u/1d0c0bc634db>
 
 ##License
 ```
