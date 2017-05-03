@@ -1,26 +1,25 @@
 package me.jessyan.wideeyes.mvp.ui.activity;
 
-import android.view.LayoutInflater;
-import android.view.View;
+import com.jess.arms.base.BaseActivity;
+import com.jess.arms.di.component.AppComponent;
 
-import common.AppComponent;
-import common.WEActivity;
 import me.jessyan.wideeyes.R;
 
-public class SplashActivity extends WEActivity{
+public class SplashActivity extends BaseActivity{
+
 
     @Override
-    protected void setupActivityComponent(AppComponent appComponent) {
+    public void setupActivityComponent(AppComponent appComponent) {
 
     }
 
     @Override
-    protected View initView() {
-        return LayoutInflater.from(this).inflate(R.layout.activity_splash,null,false);
+    public int initView() {
+        return R.layout.activity_splash;
     }
 
     @Override
-    protected void initData() {
+    public void initData() {
 
     }
 }
