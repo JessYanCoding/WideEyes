@@ -1,12 +1,11 @@
 package me.jessyan.wideeyes.mvp.model.api.service;
 
+import io.reactivex.Observable;
 import me.jessyan.wideeyes.mvp.model.entity.FindDetailEntity;
 import me.jessyan.wideeyes.mvp.model.entity.FindMoreEntity;
 import me.jessyan.wideeyes.mvp.model.entity.HomePicEntity;
 import me.jessyan.wideeyes.mvp.model.entity.HotStrategyEntity;
-
 import retrofit2.http.GET;
-import rx.Observable;
 
 /**
  * Created by jess on 8/5/16 12:05

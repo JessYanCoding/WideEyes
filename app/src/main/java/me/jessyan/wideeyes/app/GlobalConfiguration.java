@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.TextUtils;
 
+import com.facebook.soloader.SoLoader;
 import com.jess.arms.base.App;
 import com.jess.arms.base.delegate.AppDelegate;
 import com.jess.arms.di.module.GlobalConfigModule;
@@ -130,6 +131,7 @@ public class GlobalConfiguration implements ConfigModule {
                 }
                 //leakCanary内存泄露检查
                 ((App) application).getAppComponent().extras().put(RefWatcher.class.getName(), BuildConfig.USE_CANARY ? LeakCanary.install(application) : RefWatcher.DISABLED);
+                SoLoader.init(application, false);
             }
 
             @Override
@@ -201,12 +203,12 @@ public class GlobalConfiguration implements ConfigModule {
 
     @Override
     public void injectFragmentLifecycle(Context context, List<FragmentManager.FragmentLifecycleCallbacks> lifecycles) {
-            lifecycles.add(new FragmentManager.FragmentLifecycleCallbacks() {
-                @Override
-                public void onFragmentDestroyed(FragmentManager fm, Fragment f) {
-                    ((RefWatcher)((App) f.getActivity().getApplication()).getAppComponent().extras().get(RefWatcher.class.getName())).watch(this);
-                }
-            });
+        lifecycles.add(new FragmentManager.FragmentLifecycleCallbacks() {
+            @Override
+            public void onFragmentDestroyed(FragmentManager fm, Fragment f) {
+                ((RefWatcher) ((App) f.getActivity().getApplication()).getAppComponent().extras().get(RefWatcher.class.getName())).watch(this);
+            }
+        });
     }
 
 }

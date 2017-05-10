@@ -1,11 +1,12 @@
 package me.jessyan.wideeyes.mvp.ui.activity;
 
+import com.facebook.litho.ComponentContext;
+import com.facebook.litho.LithoView;
+import com.facebook.litho.widget.Text;
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 
-import me.jessyan.wideeyes.R;
-
-public class SplashActivity extends BaseActivity{
+public class SplashActivity extends BaseActivity {
 
 
     @Override
@@ -15,11 +16,21 @@ public class SplashActivity extends BaseActivity{
 
     @Override
     public int initView() {
-        return R.layout.activity_splash;
+        return 0;
     }
 
     @Override
     public void initData() {
+        final ComponentContext c = new ComponentContext(this);
+
+        final LithoView lithoView = LithoView.create(
+                this /* context */,
+                Text.create(c)
+                        .text("Hello, World!")
+                        .textSizeDip(50)
+                        .build());
+
+        setContentView(lithoView);
 
     }
 }

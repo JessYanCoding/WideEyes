@@ -2,15 +2,15 @@ package me.jessyan.wideeyes.mvp.model.api.cache;
 
 import java.util.concurrent.TimeUnit;
 
-import io.rx_cache.DynamicKey;
-import io.rx_cache.EvictProvider;
-import io.rx_cache.LifeCache;
-import io.rx_cache.Reply;
+import io.reactivex.Observable;
+import io.rx_cache2.DynamicKey;
+import io.rx_cache2.EvictProvider;
+import io.rx_cache2.LifeCache;
+import io.rx_cache2.Reply;
 import me.jessyan.wideeyes.mvp.model.entity.FindDetailEntity;
 import me.jessyan.wideeyes.mvp.model.entity.FindMoreEntity;
 import me.jessyan.wideeyes.mvp.model.entity.HomePicEntity;
 import me.jessyan.wideeyes.mvp.model.entity.HotStrategyEntity;
-import rx.Observable;
 
 /**
  * Created by jess on 8/30/16 13:53
